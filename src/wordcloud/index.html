@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 2.02</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/wc.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Material.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- HTML --> 
+
+    <br><br><br> 
+     
+    <h1>NUAGE DE MOTS </h1>
+    <h2>Choisis un fichier CSV et génères un nuage de mot pour trouver les mots qui apparaissent le plus </h2>
+    <img src="image.png" width="220" height="90" alt="logo-upec">  
+
+    <!-- NUAGE DE MOT -->
+   
+    <div class="bloc">
+        <div id="chartdiv0"></div>
+        <br>
+        <form class="myForm1">
+            <select id="framework1">
+                <option value=0>-- Choississez un 1er code --</option>
+                <option value=1>Code Civil</option>
+                <option value=2>Code Famille</option>
+                <option value=3>Code Penal</option>
+                <option value=4>Code Travail</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="bloc">
+        <div id="chartdiv1"></div>
+        <br>
+        <form class="myForm1">
+            <select id="framework2">
+                <option value=0>-- Choississez un 2nd code --</option>
+                <option value=1>Code Civil</option>
+                <option value=2>Code Famille</option>
+                <option value=3>Code Penal</option>
+                <option value=4>Code Travail</option>
+            </select>
+        </form>
+    </div>
+
+    <form id="myForm2">
+        <label class="custom-file-upload">
+            <input type="file" id="csvFile" accept=".csv" class="inputfile" multiple>
+            Charger les fichier csv
+        </label>
+        <label class="custom-file-uploadf">
+            <input id="btn" type="submit" value="Submit">
+            Générer
+        </label>
+    </form>
+
+
+    <!-- GRAPHIQUE -->
+
+
+    <h3><u>Graphique</u></h3>
+    <br>
+    <div id="chart">
+        <div id="graphic0">
+            <h2>Texte 1</h2>
+            <canvas id="myChart0" aria-label="chart" role="img"></canvas>
+        </div>
+
+        <div id="graphic1">
+            <h2>Texte 2</h2>
+            <canvas id="myChart1" aria-label="chart" role="img"></canvas>
+        </div>
+    </div>
+    <label id="choice"> Choississez un nombre de mot à afficher (0 à 10): </label>
+    <select id="mySelect">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5 selected>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+        <option value=9>9</option>
+        <option value=10>10</option>
+    </select>
+
+    <!-- DISTANCE DE MOT -->
+
+    <h3><u>Distance de mot</u></h3>
+
+    <form id="gauge_selec">
+        <select id="framework3">
+            <option value=0>-- Choississez un texte à comparer --</option>
+            <option value=1>Code Civil</option>
+            <option value=2>Code Famille</option>
+            <option value=3>Code Penal</option>
+            <option value=4>Code Travail</option>
+        </select>
+    </form>
+    <form id="refresh">
+        <label class="custom-file-uploadf">     
+            <input id="btn_refresh" type="button" value="refresh">
+            Refresh
+        </label>
+    </form>
+
+    <div id="bloc_gauge">
+        <div id="gauge1" class="gauge">CODE CIVIL
+            <br>
+            <label class="espace">
+                <a class="d"> d =</a>
+                <a id="value_gauge1">0</a>
+            </label>
+        </div>
+        <div id="gauge2" class="gauge">CODE FAMILLE
+            <br>
+            <label class="espace">
+                <a class="d"> d =</a>
+                <a id="value_gauge2">0</a>
+            </label>
+        </div>
+        <div id="gauge3" class="gauge">CODE PENAL
+            <br>
+            <label class="espace">
+                <a class="d"> d =</a>
+                <a id="value_gauge3">0</a>
+            </label>
+        </div>
+        <div id="gauge4" class="gauge">CODE TRAVAIL
+            <br>
+            <label class="espace">
+                <a class="d"> d =</a>
+                <a id="value_gauge4">0</a>
+            </label>
+        </div>  
+    </div>
+
+    <footer>
+        <hr>
+        <p>Site réalisé par Jérome Tran, Leandro Neves Sousa, Rayane Khatim et Axelle Peenaert dans le cadre de la SAE 2.02</p>
+        <p>BUT informatique de Créteil-Vitry, année 2022-2023</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>

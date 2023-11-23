@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Tran Jerome\\OneDrive - UPEC\\Documents\\BUT 1 Info\\S2\\SAE\\S2.02 - Exploration algorithmique d'un problème\\lib\\pdfbox-app-3.0.0-alpha3.jar"
+    ]
+}

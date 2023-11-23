@@ -1,0 +1,13 @@
+Notice d'utilisation : 
+
+
+Etape 1 : Lancer le fichier main.java pour créer les fichiers .csv dans "wordcloud/csv_file"
+
+Etape 2 : Ouvrir la page web "wordcloud/index.html"
+
+Etape 3 : Sélectionner les codes à afficher en nuages de mots et glisser l'ensemble des fichiers csv en appuyant sur "charger les fichier"
+
+Etape Finale : Appuyer sur Générer et choississez différentes options pour les graphiques et les distances de mots 
+
+Dans le cas ou une erreur s'affiche à l'éxecution du main :  Aller dans JAVA PROJECTS (en bas à gauche). Aller tout en bas dans "Referenced Libraries". Appuyer sur le "+".
+Sélectionner le fichier : "SAE_2.02_code_Tran_Peenaert_NevesSousa_Kathim/Lib/pdfbox-app-3.0.0-alpha3"
